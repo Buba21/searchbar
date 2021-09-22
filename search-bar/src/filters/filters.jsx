@@ -16,7 +16,7 @@ const Filters = () => {
   const [endDate, setEndDate] = useState();
   const [localeToggle, setLocaleToggle] = useState(false);
   const [localeData, setLocalData] = useState([`${t('current_location')}`, 'Madrid, Spain']);
-  Geocode.setApiKey('AIzaSyBsUSTuf1wjXQbmcvfITcJmMTNOQ1hCstI');
+  Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAPS_KEY);
   Geocode.setLanguage('en');
   Geocode.setRegion('pt');
   Geocode.setLocationType('ROOFTOP');
