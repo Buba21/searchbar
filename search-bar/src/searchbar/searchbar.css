@@ -1,0 +1,121 @@
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+.searchbar-container {
+    width: 70vw;
+    height: 8vh;
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    padding: 5px;
+}
+
+.input-container {
+    width: 40vw;
+    height: 9vh;
+    border: none;
+    font-size: x-large;
+}
+.btn {
+    height: 6vh;
+    width: 10vw;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.filter-btn {
+    background-color: white;
+    color: #1b8756;
+}
+
+.search-btn {
+    background-color: #1b8756;
+    color: white;
+    border-radius: 3px;
+}
+
+
+.search-box-container {
+    width: 70.7vw;
+    margin-left: 10vw;
+    margin-top: 5px;
+    background-color: white;
+    position: absolute;
+    display: inline-grid;
+    min-height: min-content;
+    height: fit-content;
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;
+    transition: all .8s, ease-in;
+    z-index: 2;
+}
+
+.search-box-data {
+    padding: 20px;
+}
+.search-box-data:hover {
+    background-color: #e5fae5;
+    cursor: pointer;
+}
+
+.react-datepicker__input-container input {
+    border: none;
+    width: 90%;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .searchbar-container {
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: flex-start;
+        height: 22vh;
+        width: 70.7vw;
+    }
+
+    .search-box-container {
+        width: 73vw;
+    }
+
+    .btn {
+     width: 70vw;
+        margin-bottom: 5px;
+    }
+    .input-container {
+        width: 56vw;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .input-container {
+        width: 34vw;
+    }
+    .btn {
+        width: 15vw;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .input-container {
+        width: 34vw;
+    }
+    .btn {
+        width: 10vw;
+    }
+}
