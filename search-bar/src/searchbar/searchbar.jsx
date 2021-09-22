@@ -29,6 +29,14 @@ const Searchbar = () => {
     setFiltersToggle(!filtersToggle);
   };
 
+  const searchItems = () => {
+    window.alert(`Is this the item you wanted: ${searchField}`);
+    setSearchField('');
+    setSearchBoxToggle(false);
+    setFiltersToggle(false);
+    setSearchBoxData([]);
+  };
+
   // This is a repetition of code, but i prefer to keep the behaviours separate to minimize,
   // the possibility of bugs and weird interactions.
   const closeSearchBoxContainer = (e) => {
@@ -77,8 +85,21 @@ const Searchbar = () => {
             />
           </span>
           <span>
-            <button type="button" className="btn filter-btn" onClick={toggleFilters}>{t('filter_button')}</button>
-            <button type="button" className="btn search-btn" style={{ marginRight: '5px' }}>{t('search_button')}</button>
+            <button
+              type="button"
+              className="btn filter-btn"
+              onClick={toggleFilters}
+            >
+              {t('filter_button')}
+            </button>
+            <button
+              type="button"
+              className="btn search-btn"
+              style={{ marginRight: '5px' }}
+              onClick={searchItems}
+            >
+              {t('search_button')}
+            </button>
           </span>
         </div>
         {searchBoxToggle && searchBoxData.length !== 0 && (
