@@ -37,8 +37,6 @@ const Searchbar = () => {
     setSearchBoxData([]);
   };
 
-  // This is a repetition of code, but i prefer to keep the behaviours separate to minimize,
-  // the possibility of bugs and weird interactions.
   const closeSearchBoxContainer = (e) => {
     if (searchBoxRef.current && searchBoxToggle && !searchBoxRef.current.contains(e.target)) {
       setSearchBoxToggle(false);
